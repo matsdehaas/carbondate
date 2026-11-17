@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/start_screen"
+    android:background="#8C154F"
+    android:padding="0dp"
+    android:fontFamily="@font/italiana">
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shape1" />
+
+    <!-- 👇 De rest van je content in het midden -->
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/start_logo"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CarbonDate"
+            android:textColor="#E8CF7D"
+            android:textSize="48sp"
+            android:layout_marginBottom="64dp"
+            android:fontFamily="@font/italiana" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/shape2" />
+
+</RelativeLayout>

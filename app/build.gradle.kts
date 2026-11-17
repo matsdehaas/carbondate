@@ -1,0 +1,67 @@
+plugins {
+    alias(libs.plugins.android.application)
+//    id("com.android.application")
+    id("com.google.gms.google-services")
+}
+
+android {
+    namespace = "com.example.carbon"
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "com.example.carbon"
+        minSdk = 24
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation(libs.firebase.common)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.recyclerview)
+    implementation(libs.legacy.support.v4)
+    implementation(libs.ext.junit)
+    implementation(libs.firebase.storage)
+    testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    // Zxing Core for QR Code Generation
+    implementation("com.google.zxing:core:3.5.3")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.google.firebase:firebase-firestore:24.10.0")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito:mockito-core:5.11.0")
+    // Glide – Image loading library
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+}
